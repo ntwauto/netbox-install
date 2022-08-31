@@ -61,6 +61,7 @@ e69b3162b100  docker.io/library/postgres:14-alpine  postgres              24 sec
 68c4f900d329  docker.io/ntwauto/netbox:v3.3.0       /opt/netbox/house...  17 seconds ago  Up 17 seconds ago                          netbox_devel_netbox-housekeeping_1
 19d733bbb42a  docker.io/ntwauto/netbox:v3.3.0       /opt/netbox/docke...  14 seconds ago  Up 12 seconds ago  0.0.0.0:8000->8080/tcp  netbox_devel_netbox_1
 
+```
 ```console
 ## This will stop and remove all the containers
 $ invoke dev.destroy
