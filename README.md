@@ -23,11 +23,7 @@ $ pip install -r requirements.txt
 $ cp env.example .env
 ```
 
-### Easy install
-
- OR you can run this simple shell script to take care of the steps above.
- 
-### Start podman
+## Starting podman
 
 To spin up netbox podman containers follow these steps:
 
@@ -39,14 +35,35 @@ $ cd netbox-install
 $ invoke --list 
 ```
 ```bash
+(venv) [automate@devbox01 netbox-install]$ invoke --list
+Available tasks:
+
+  dev.debug               Start Netbox and its dependencies in debug mode.
+  dev.destroy             Destroy all containers and volumes.
+  dev.restart             Gracefully restart all containers.
+  dev.restart-scheduler   Gracefully restart all containers.
+  dev.start               Start Netbox and its dependencies in detached mode.
+  dev.stop                Stop Netbox and its dependencies.
+```
+```console
+##This command will list netbox containers
+$ invoke dev.start
+```
+```bash
+##You should see this output.
+
+(venv) [automate@devbox01 netbox-install]$ podman ps
+CONTAINER ID  IMAGE                                 COMMAND               CREATED         STATUS             PORTS                   NAMES
+e69b3162b100  docker.io/library/postgres:14-alpine  postgres              24 seconds ago  Up 24 seconds ago                          netbox_devel_postgres_1
+1cd4698b81e9  docker.io/library/redis:7-alpine      sh -c redis-serve...  22 seconds ago  Up 23 seconds ago                          netbox_devel_redis_1
+17b113dcec79  docker.io/library/redis:7-alpine      sh -c redis-serve...  21 seconds ago  Up 21 seconds ago                          netbox_devel_redis-cache_1
+5c2a47057f10  docker.io/ntwauto/netbox:v3.3.0       /opt/netbox/venv/...  19 seconds ago  Up 19 seconds ago                          netbox_devel_netbox-worker_1
+68c4f900d329  docker.io/ntwauto/netbox:v3.3.0       /opt/netbox/house...  17 seconds ago  Up 17 seconds ago                          netbox_devel_netbox-housekeeping_1
+19d733bbb42a  docker.io/ntwauto/netbox:v3.3.0       /opt/netbox/docke...  14 seconds ago  Up 12 seconds ago  0.0.0.0:8000->8080/tcp  netbox_devel_netbox_1
 
 ```
-```console
-```
-```console
-```
-$ invoke dev.start ## This will start podman-compose
-$
+## This will stop and remove all the containers
+$ invoke dev.destroy
 ```
 
 The whole application will be available after a few minutes.
