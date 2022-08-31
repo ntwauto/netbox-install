@@ -1,7 +1,7 @@
 # netbox-install on podman
 
-[The GitHub repository](netbox-install-github) houses the components needed to build NetBox as a container.
-Netbox image was built on `ubi9' and pushed to [Docker Hub]. See the docker-compose.dev.yml file.
+[The GitHub repository](netbox-install-github) houses the components needed to build NetBox as a podman container.
+Netbox image was built on `ubi9` and pushed to [Docker Hub]. See the docker-compose.dev.yml file.
 
 ## Requirements
 - python3 --version >= 3.6
