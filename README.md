@@ -34,8 +34,8 @@ To spin up netbox podman containers follow these steps:
 ```console
 $ cd netbox-install
 ```
-*This command will list the available tasks*
 ```console
+##This command will list the available tasks
 $ invoke --list 
 ```
 ```bash
