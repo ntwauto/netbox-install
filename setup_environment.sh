@@ -13,3 +13,5 @@ echo "Updating pip wheel and setuptools"
 pip install -U pip wheel setuptools
 echo "Installing required python packages"
 pip install -r requirements.txt
+echo "Copy environment variable env.example to .env"
+cp env.example .env
