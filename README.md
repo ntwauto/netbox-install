@@ -45,7 +45,7 @@ Available tasks:
   dev.start               Start Netbox and its dependencies in detached mode.
   dev.stop                Stop Netbox and its dependencies.
 ```
-This command will list netbox containers
+This command will start netbox containers
 ```console
 $ invoke dev.start
 ```
