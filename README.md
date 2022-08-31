@@ -7,7 +7,7 @@ Netbox image was built on `ubi9` and pushed to [Docker Hub]. See the docker-comp
 - python3 --version >= 3.6
 - podman --version == 4.0.2
 - podman-compose --version == 1.0.3 
-- podman-plugins rpm installed
+- podman-plugins `dnf install podman-plugins`
 
 ## Quickstart
 
