@@ -30,8 +30,8 @@ To spin up netbox podman containers follow these steps:
 ```console
 $ cd netbox-install
 ```
+This command will list the available tasks
 ```console
-##This command will list the available tasks
 $ invoke --list 
 ```
 ```bash
@@ -45,8 +45,8 @@ Available tasks:
   dev.start               Start Netbox and its dependencies in detached mode.
   dev.stop                Stop Netbox and its dependencies.
 ```
+This command will list netbox containers
 ```console
-##This command will list netbox containers
 $ invoke dev.start
 ```
 ```bash
@@ -62,8 +62,8 @@ e69b3162b100  docker.io/library/postgres:14-alpine  postgres              24 sec
 19d733bbb42a  docker.io/ntwauto/netbox:v3.3.0       /opt/netbox/docke...  14 seconds ago  Up 12 seconds ago  0.0.0.0:8000->8080/tcp  netbox_devel_netbox_1
 
 ```
+This will stop and remove all the containers
 ```console
-## This will stop and remove all the containers
 $ invoke dev.destroy
 ```
 
