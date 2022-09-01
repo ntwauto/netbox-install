@@ -27,7 +27,7 @@ from .common import (
 
 COMPOSE_DIR = os.getenv("COMPOSE_DIR", "deployment")
 COMPOSE_FILE_DEV = os.getenv("COMPOSE_FILE_DEV", "docker-compose.dev.yml")
-COMPOSE_OVERRIDE_FILE = os.getenv("COMPOSE_OVERRIDE_FILE", "docker-compose.override.yml")
+COMPOSE_OVERRIDE_FILE = os.getenv("COMPOSE_OVERRIDE_FILE", "docker-compose.dev.override.yml")
 COMPOSE_FILE_PATH = os.path.join(COMPOSE_DIR, COMPOSE_FILE_DEV)
 COMPOSE_OVERRIDE_PATH = os.path.join(COMPOSE_DIR, COMPOSE_OVERRIDE_FILE)
 
